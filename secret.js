@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let lastKeyTime = Date.now();
 
   document.addEventListener('keydown', event => {
-      const charList = '0123456789';
+      const charList = 'abcdefghijklmnopqrstuvwxyz0123456789';
       const key = event.key.toLowerCase();
 
       // we are only interested in alphanumeric keys
@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (result){
         window.location.href = "http://p3nguinmeme.org.uk/secret.html";
       }
+      
       
       
   });
