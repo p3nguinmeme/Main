@@ -9,11 +9,17 @@ h1 {
 	font-size: 30px;
 	color: #1f1;
 	text-align: center;
+	margin: 0px;
 }
 h2 {
 	font-family: monospace;
 	font-size: 30px;
 	color: #1f1;
 	text-align: left;
+	margin: 0px;
 }
-/* PLEASE WORK */
+/* CSS stands for:
+C - trial
+S - and
+S - error
+*/
