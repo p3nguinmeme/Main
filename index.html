@@ -6,7 +6,29 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>This is a simple test again</h1>
-  <p>Oliver SMELLS SO MUCH!!111111!!!</p>
+  <div>
+    <h1>Not taken from GeeksforGeeks</h1>
+    <h3>Click on the button to see image</h3>
+    <p>the img source is from a https link so it might not display</p>
+    <!-- Add id to image -->
+    <img id="image"
+         src=
+          "https://media.geeksforgeeks.org/wp-content/uploads/20210915115837/gfg3.png"
+         alt="An image should be displayed here" />
+</div>
+<button type="button" onclick="show()" id="btnID">
+    Show Image
+</button>
+
+<script>
+    function show() {
+        /* Access image by id and change 
+        the display property to block*/
+        document.getElementById('image')
+            .style.display = "block";
+        document.getElementById('btnID')
+            .style.display = "none";
+    }
+</script>
 </body>
 </html>
