@@ -17,6 +17,16 @@ h2 {
 	font-size: 30px;
 	font-family: monospace;
 }
+marquee {
+	text-align: center;
+	margin: 0px;
+	font-size: 30px;
+	font-family: monospace;
+}
+table, th, td {
+	border: 0px;
+	margin: 0px;
+}
 img {
 	max-width: 270px;
 	border: #1F1;
