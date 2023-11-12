@@ -7,7 +7,7 @@ html {
 }
 #content {
 	margin: auto;
-  	width: 725px;
+  	max-width: 726px;
 }
 h1 {
 	text-align: center;
