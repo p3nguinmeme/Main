@@ -1,3 +1,7 @@
+/* "Blessed is the man who remains steadfast under trial(...)"
+(James 1:12)
+((this is about CSS i think)) */
+
 * {
 	font-family: monospace;
 }
@@ -8,21 +12,19 @@ html {
 	border: 0px;
 	height: 100%;
 }
-#content {
+body {
 	margin: auto;
   	max-width: 80%;
 }
 h1, h2 {
 	margin: 0px;
 	font-size: 30px;
-	
 }
 h1 {
 	text-align: center;
 }
 h2 {
 	text-align: left;
-
 }
 th {
 	border: 0px;
@@ -46,14 +48,13 @@ audio {
 button {
 	height: 30px;
 	width: 90px;
-	
 }
 /* CSS stands for:
 C - trial
 S - and
 S - error
 */
-/* CSS stans for: 
+/* CSS stands for: 
 C - I
 S - HATE
 S - FRONTEND
