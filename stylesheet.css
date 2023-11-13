@@ -1,3 +1,6 @@
+* {
+	font-family: monospace;
+}
 html {
 	background-color: rgb(26,26,28);
 	color: #1f1;
@@ -7,19 +10,19 @@ html {
 }
 #content {
 	margin: auto;
-  	max-width: 726px;
+  	max-width: 80%;
+}
+h1, h2 {
+	margin: 0px;
+	font-size: 30px;
+	
 }
 h1 {
 	text-align: center;
-	margin: 0px;
-	font-size: 30px;
-	font-family: monospace;
 }
 h2 {
 	text-align: left;
-	margin: 0px;
-	font-size: 30px;
-	font-family: monospace;
+
 }
 th {
 	border: 0px;
@@ -31,7 +34,7 @@ th {
 	padding-right: 20px;
 }
 img {
-	max-width: 270px;
+	max-width: 20%;
 	border: #1F1;
 	border-style: double;
 	border-width: 5px;
@@ -43,7 +46,7 @@ audio {
 button {
 	height: 30px;
 	width: 90px;
-	font-family: monospace;
+	
 }
 /* CSS stands for:
 C - trial
