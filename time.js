@@ -1,6 +1,5 @@
 function getTime(){
     const date = new Date();
-
     const time = document.getElementById("time");
     let hour = date.getHours();
     let min = date.getMinutes();
@@ -16,8 +15,9 @@ function getTime(){
     time.innerHTML = result;
 
     const time2 = document.getElementById("time2");
-    let day = date.getDay();
-    let month = date.getMonth();
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+
     //add leading 0
     if (day < 10){
         day = "0"+ day.toString();
