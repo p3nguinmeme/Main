@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const result = equalsCheck(buffer, keySequence);
       if (result){
-        window.location.href = "http://p3nguinmeme.org.uk/secret.html";
+        window.location.href = "http://p3nguinmeme.org.uk/TheMessiah.html";
       }
       
       
