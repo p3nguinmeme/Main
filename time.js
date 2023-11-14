@@ -27,8 +27,7 @@ function getTime(){
     }
     result = day + "/" + month;
     time2.innerHTML = result
-    console.log("ping!");
 }
 getTime();
-//continuously fires script every 60 seconds
-setInterval(getTime, 1000 * 60);
+//continuously fires script every 15 seconds
+setInterval(getTime, 1000 * 15);
