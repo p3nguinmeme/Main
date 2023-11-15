@@ -30,7 +30,7 @@ h1, h2 {
 table {
 	width: 100%;
 }
-th {
+th, td {
 	border: 0px;
 	margin: 0px;
 	padding: 0px;
