@@ -134,3 +134,9 @@ S - FRONTEND
 	top: 70% ;
     left: 75% ;
 }
+
+#logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
