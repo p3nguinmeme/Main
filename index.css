@@ -12,7 +12,7 @@ html {
 	border: 0px;
 	height: 100%;
 }
-#pagebuttons {
+.pagebuttons {
 	width: 25% !important;
 }
 body {
