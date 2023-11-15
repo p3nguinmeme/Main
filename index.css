@@ -48,9 +48,7 @@ audio {
 }
 button {
 	height: 90px;
-	width: 23%;
-	margin-left: 1%;
-	margin-right: 1%;
+	width: 90%;
 	border: #1F1;
 	border-style: double;
 	border-width: 5px;
