@@ -13,7 +13,7 @@ html {
 	height: 100%;
 }
 #pagebuttons {
-	width: 25%;
+	width: 25% !important;
 }
 body {
 	margin-left: auto;
