@@ -47,8 +47,11 @@ audio {
 }
 button {
 	height: 90px;
-	width: 24%;
-	padding-left: 
+	width: 23%;
+	padding-left: 2%;
+	border: #1F1;
+	border-style: double;
+	border-width: 5px;
 }
 
 .quote {
