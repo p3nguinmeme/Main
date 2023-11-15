@@ -36,6 +36,9 @@ th {
 	padding-left: 20px;
 	padding-right: 20px;
 }
+#pagebuttons {
+	width: 25%;
+}
 img {
 	max-width: 20%;
 	border: #1F1;
