@@ -46,8 +46,13 @@ audio {
 	width: 270px;
 }
 button {
-	height: 30px;
-	width: 90px;
+	height: 90px;
+	width: 23%;
+	margin-left: 1%;
+	margin-right: 1%;
+	border: #1F1;
+	border-style: double;
+	border-width: 5px;
 }
 
 .quote {
@@ -60,6 +65,9 @@ button {
 	border-style: double;
 	border-width: 5px;
 	*/
+}
+a {
+	font-size: 0px;
 }
 /* CSS stands for:
 C - trial
@@ -126,7 +134,7 @@ S - error
 #visualiser-text{
 	position: absolute;
 	top: 70% ;
-    left: 75% ;
+	left: 75% ;
 }
 
 #logo {
