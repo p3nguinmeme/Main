@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8"/>
 	<title>CoolZone</title>
-	<link rel="stylesheet" href="stylesheet.css">
+	<link rel="stylesheet" href="index.css">
 	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
@@ -27,7 +27,18 @@
 	</a>
 
 
+	<p id="visualiser-text">Use up and down arrow keys to control volume!</p>
+	<div id="container" style="background-color: black;">
+		<input type="file" id="fileupload" accept="audio/*">
+        <canvas id="canvas1"></canvas>
+        <audio id="audio1"></audio>
+	</div>
+	
+	
+
+
 	<script src="time.js"></script>
 	<script src="codes.js"></script>
+	<script src="visualiser.js"></script>
 </body>
 </html>

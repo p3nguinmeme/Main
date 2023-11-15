@@ -99,3 +99,38 @@ S - FRONTEND
 #mannaverse-version {
 	color: #ddd;
 }
+
+
+/* Visualiser Formatting */
+#container {
+    position: absolute !important;
+    top: 75% !important;
+    left: 75% !important;
+    width: 25% !important;
+    height: 25% !important;
+    background: black;
+}
+
+#canvas1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#audio1 {
+    width: 50%;
+    margin: 50px auto;
+    display: block;
+}
+
+#fileupload {
+	position: absolute;
+	z-index: 100;
+}
+#visualiser-text{
+	position: absolute;
+	top: 70% ;
+    left: 75% ;
+}
