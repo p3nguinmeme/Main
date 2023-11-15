@@ -1,6 +1,6 @@
 #ball {
     animation: roll infinite 3s linear;
-    color: white;
+    color: rgba(3, 235, 196, 0.712).712);
     width: 25%;
     position: absolute;
     top: 50%; left: 50%;
