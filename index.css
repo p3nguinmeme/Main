@@ -129,3 +129,8 @@ S - FRONTEND
 	position: absolute;
 	z-index: 100;
 }
+#visualiser-text{
+	position: absolute;
+	top: 70% ;
+    left: 75% ;
+}
