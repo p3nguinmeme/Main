@@ -48,6 +48,9 @@ img {
 	border-style: double;
 	border-width: 5px;
 }
+.noborder{
+	border-style: none !important;
+}
 audio {
 	height: 30px;
 	width: 270px;
