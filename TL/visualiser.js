@@ -41,6 +41,7 @@ document.addEventListener('keydown', logKey);
 //});
 audio1.addEventListener("ended", function(){
     audio1.currentTime = 0;
+    document.getElementById('fileupload').value = null
     //console.log("ended");
 
 });
