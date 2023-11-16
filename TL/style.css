@@ -1,0 +1,115 @@
+/* Mannaverse Formatting */
+
+#ourmanna-verse {
+	padding: 10px;
+	margin:10px;
+	background: rgba(0, 0, 0, 0.3);
+	border-color: rgba(0, 0, 0, 0.3);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+#mannaverse {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+#mannaverse-reference:before {
+	content: "- ";
+}
+#mannaverse-reference {
+	text-align: right;
+	font-size: 12px;
+}
+#mannaverse-version {
+	color: #ddd;
+}
+
+.quote {
+	margin: auto;
+	width: fit-content;
+	height: fit-content;
+	/*
+	border: #1F1;
+	border-spacing: 10px;
+	border-style: double;
+	border-width: 5px;
+	*/
+}
+
+/* Visualiser Formatting */
+#container {
+    position: absolute !important;
+    top: 75% !important;
+    left: 75% !important;
+    width: 25% !important;
+    height: 25% !important;
+    background: black;
+}
+
+#canvas1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#audio1 {
+    width: 50%;
+    margin: 50px auto;
+    display: block;
+}
+
+#fileupload {
+	position: absolute;
+	z-index: 100;
+}
+#visualiser-text{
+	position: absolute;
+	top: 70% ;
+	left: 75% ;
+}
+
+button{
+    height: 100%;
+    width: 100%;
+    background-color: #576382;
+    color: white;
+    border: #242936;
+	border-style: double;
+	border-width: 5px;
+}
+a{
+    height: 100%;
+    width: 100%;
+}
+
+.link {
+    width: 150px !important;
+    height:40px !important;
+    padding-top: 5px;  
+}
+
+#links {
+    width: fit-content;
+    border: #ffcc66;
+    border-style: solid solid hidden hidden;
+    border-width: 3px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 5px;
+    padding-right:5px;
+    padding-top: 5px;
+
+
+}
+
+#logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    width: 250px;
+}
