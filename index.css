@@ -12,6 +12,12 @@ html {
 	border: 0px;
 	height: 100%;
 }
+.pagebuttons {
+	width: 25% !important;
+}
+button:hover{
+	cursor: pointer;
+}
 body {
 	margin-left: auto;
 	margin-right: auto;
@@ -21,12 +27,13 @@ h1, h2 {
 	margin: 0px;
 	font-size: 30px;
 }
-
 .text-center {
 	text-align: center;
 }
-
-th {
+table {
+	width: 100%;
+}
+th, td {
 	border: 0px;
 	margin: 0px;
 	padding: 0px;
@@ -46,8 +53,11 @@ audio {
 	width: 270px;
 }
 button {
-	height: 30px;
-	width: 90px;
+	height: 90px;
+	width: 90%;
+	border: #1F1;
+	border-style: double;
+	border-width: 5px;
 }
 
 .quote {
@@ -61,17 +71,9 @@ button {
 	border-width: 5px;
 	*/
 }
-/* CSS stands for:
-C - trial
-S - and
-S - error
-*/
-/* CSS stands for: 
-C - I
-S - HATE
-S - FRONTEND
-*/
-
+a {
+	font-size: 0px;
+}
 
 /* Mannaverse Formatting */
 
@@ -132,7 +134,7 @@ S - FRONTEND
 #visualiser-text{
 	position: absolute;
 	top: 70% ;
-    left: 75% ;
+	left: 75% ;
 }
 
 #logo {
@@ -140,3 +142,4 @@ S - FRONTEND
 	top: 0;
 	left: 0;
 }
+

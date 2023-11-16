@@ -6,6 +6,13 @@ const keySequence = [
   's'
 ];
 
+const tman = [
+  't',
+  'm',
+  'a',
+  'n'
+]
+
 
 //check arrays are equal
 function equalsCheck(a, b) {
@@ -47,18 +54,17 @@ document.addEventListener('DOMContentLoaded', () => {
           buffer = [];
       }
 
-      
-
-
-
       buffer.push(key);
       lastKeyTime = currentTime;
 
-      const result = equalsCheck(buffer, keySequence);
+      let result = equalsCheck(buffer, keySequence);
       if (result){
-        window.location.href = "http://p3nguinmeme.org.uk/TheMessiah.html";
+        window.location.href = "http://p3nguinmeme.org.uk/TL/TheMessiah.html";
       }
-      
+      result = equalsCheck(buffer, tman);
+      if (result){
+        window.location.href = "http://p3nguinmeme.org.uk/TL/TmanTheThird.html";
+      }
       
       
   });
