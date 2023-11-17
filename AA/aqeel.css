@@ -20,25 +20,16 @@ html ::-webkit-scrollbar{
 
 
 /*navbar start*/
-#navbar{
-    background-color: #0b3075;
- 
-    
-}
 
-#aqeellogo{
-    width: 160px;
-    margin-left: 40px;
 
-}
-.navbar-nav{
-    margin-left: 50px;
-}
 .nav-item .nav-link{
     color: white;
     margin-left: 10px;
     font-weight: bold;
     transition: 0.5;
+    font-size: larger;
+    margin: 20;
+    
 }
 .nav-item .nav-link:hover{
     background: #cac2c2;
@@ -52,13 +43,15 @@ html ::-webkit-scrollbar{
     border: 1px solid white;
     
 }
+
+
 /*navbar end*/
 
 /*home start*/
 #home{
     width: 100%;
-    height: 90vh;
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(media/onepeice.png);
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(media/luffy.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 88%;
@@ -96,9 +89,9 @@ html ::-webkit-scrollbar{
 }
 /*home end*/
 
-
-
-
+#quote{
+    font-size: 1000px;
+}
 
 
 
