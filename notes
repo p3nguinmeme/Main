@@ -1,4 +1,0 @@
-Note from Tman,
-
-create a "state" value for objects, Use a while loop to reference if it is idle for the movement functions,
-this may solve the issue for awkward pauses/premature movement
