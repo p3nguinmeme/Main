@@ -1,3 +1,53 @@
+* {
+	font-family: monospace;
+}
+html {
+    overflow: hidden;
+	background-color: rgb(26,26,28);
+	color: #1f1;
+	margin: 0px;
+	border: 0px;
+	height: 100%;
+}
+
+h1, h2 {
+	margin: 0px;
+	font-size: 30px;
+}
+.text-center {
+	text-align: center;
+}
+table {
+	width: 100%;
+}
+th, td {
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+#scrolltext {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+img {
+    z-index: 98;
+    width: 250px;
+	border: #1F1;
+	border-style: double;
+	border-width: 5px;
+}
+.noborder{
+	border-style: none !important;
+}
+audio {
+	height: 30px;
+	width: 270px;
+}
+
+
+
+
+
 /* Mannaverse Formatting */
 
 #ourmanna-verse {
@@ -80,6 +130,10 @@ button{
 	border-style: double;
 	border-width: 5px;
 }
+button:hover{
+	cursor: pointer;
+    background-color: #3d465c;
+}
 a{
     height: 100%;
     width: 100%;
@@ -98,18 +152,15 @@ a{
     position: fixed;
     bottom: 0;
     left: 0;
-    
-
-
-
 }
 
 #logo{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     padding: 10px;
     width: 250px;
+    max-width: 100%;
 }
 
 #animate-container {
@@ -127,4 +178,12 @@ a{
     position: absolute;
     background-color: red;
     z-index: 99;
+}
+
+#animate2 {
+    position: absolute;
+    left: -300px;
+    z-index: 98;
+    width: 250px;
+    height: 250px;
 }

@@ -2,7 +2,8 @@
 canvas = document.getElementById("animate-container");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-
+//TODO
+//implement dynamic framerate assignment based on a dummy render
 
 //This is the object that is a WIP
 let obj = {
@@ -13,7 +14,7 @@ let obj = {
     velocity: 10,
     speed: 1,
     sprite: "",
-    framerate: 45,
+    framerate: 60, //This is a delay between frames, Not FPS // Its important enough delay is given for the CPU to handle instructions
     direction: "",
     stepCount: 0,
     stepLength: 0,
@@ -23,7 +24,6 @@ let obj = {
       this.direction = "up"
       this.frame(this)
       await sleep((this.framerate + 5) * this.stepCount)
-      //id1 = setInterval(this.frame.bind(this, stepCount, stepLength, direction), 100);
       
     },
     down: async function(length) {
@@ -32,7 +32,6 @@ let obj = {
       this.direction = "down"
       this.frame(this)
       await sleep((this.framerate + 5) * this.stepCount)
-      //id1 = setInterval(this.frame.bind(this, stepCount, stepLength, direction), 100);
       
     },
     left: async function(length) {
@@ -41,7 +40,6 @@ let obj = {
       this.direction = "left"
       this.frame(this)//, stepCount, stepLength, direction)
       await sleep((this.framerate + 5) * this.stepCount)
-      //id1 = setInterval(this.frame.bind(this, stepCount, stepLength, direction), 100);
       
     },
     right: async function(length) {
@@ -50,7 +48,6 @@ let obj = {
       this.direction = "right"
       this.frame(this)
       await sleep((this.framerate + 5) * this.stepCount)
-      //id1 = setInterval(this.frame.bind(this, stepCount, stepLength, direction), 100);
       
     },
     frame: async function() {
@@ -97,17 +94,25 @@ obj1.id = 1;
 
 //obj2 =links 
 let obj2 = Object.create(obj);
-obj2.target = document.getElementById("links")
+obj2.target = document.getElementById("animate2")
 obj2.id = 2;
-obj2.posy = canvas.height
+obj2.posx = -300
 
 //We're So back!
 //await is used to wait for a thing to finish
+
+//scrolling image = funny
+//consider updating what the width of the screen is to fix some bugs :thumbs-up:
+async function marquee() {
+  await obj2.right(300 + canvas.width)
+  obj2.posx = -300
+  marquee()
+}
+
 async function run() {
   //these two will fire in parralel
-  obj1.down(200)
-  await obj2.up(200)
-
+  marquee()
+  await obj1.down(200)
   await obj1.right(200)
   await obj1.left(100)
   
@@ -116,7 +121,4 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-
 run()
-
-//You can ignore essentially everything below here, Its only being used as a reference at the moment so try to keep it in
