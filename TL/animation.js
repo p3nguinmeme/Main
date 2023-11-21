@@ -124,6 +124,11 @@ obj2.target = document.getElementById("animate2")
 obj2.id = "image";
 obj2.posx = -300
 
+let obj3 = Object.create(obj);
+obj2.target = document.getElementById("animate3")
+obj3.id = "menace";
+obj3.posx = 900 - 100
+obj3.posy = 900 - 100
 
 
 //We're So back!
@@ -131,28 +136,24 @@ obj2.posx = -300
 
 //scrolling image = funny
 //consider updating what the width of the screen is to fix some bugs :thumbs-up:
-async function marquee() {
-  obj1.right(350 + 100 + window.innerWidth)
-  await obj2.right(350 + window.innerWidth)
-  obj1.posx = -300 - 100
-  obj2.posx = -300
 
-
-  marquee()
-}
 
 async function run() {
   //these two will fire in parralel
   //dont move the same object twice at the same time, Will cause unexpected behaviour!
-  //marquee()
   obj1.right(350 + (window.innerWidth / 2))
+  obj3.left(500)
   await obj2.right(350 + (window.innerWidth / 2))
-  obj2.change("../media/favicon.ico")
-  obj1.right(window.innerWidth / 4)
-  await obj2.right(window.innerWidth / 4)
-  obj2.flip()
-  obj1.right(window.innerWidth / 4 + 100)
-  obj2.right(window.innerWidth / 4)
+
+
+  obj1.change("media/falling.gif")
+  obj1.vector(window.innerWidth / 2 + 100, window.innerHeight + 800)
+
+  obj2.velocity = 5
+  await obj2.right(window.innerWidth / 8)
+
+  
+
   
 }
 function sleep(ms) {

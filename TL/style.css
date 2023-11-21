@@ -95,6 +95,7 @@ audio {
     width: 500px !important;
     height: 200px !important;
     background: black;
+    z-index: 101;
 }
 #visualiser-text{
 	position: fixed;
@@ -186,4 +187,12 @@ a{
     z-index: 98;
     width: 250px;
     height: 250px;
+}
+
+#animate3 {
+    position: absolute;
+    right: -100px;
+    z-index: 98;
+    width: 100px;
+    height: 100px;
 }
