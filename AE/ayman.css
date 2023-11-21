@@ -21,7 +21,7 @@ html ::-webkit-scrollbar{
 
 /*navbar start*/
 #navbar{
-  background-color: rgba(255, 230, 87, 0.674);
+  background: transparent;
 
   
 }
