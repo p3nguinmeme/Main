@@ -19,7 +19,7 @@ body {
   align-items: center;
   padding: 0 50px;
   height: 100%;
-  color: rgb(129, 238, 46);
+  color: rgba(46, 222, 238, 0.984);
   font-family: "Sen", sans-serif;
 }
 
@@ -29,7 +29,7 @@ body {
 
 .logo {
   font-size: 30px;
-  color: #4dbf00;
+  color: #00bfa6;
 }
 
 .menu-container {
