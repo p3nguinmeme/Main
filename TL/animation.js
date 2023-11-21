@@ -4,6 +4,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 //TODO
 //implement dynamic framerate assignment based on a dummy render
+//add ability for arcs to be done (low priority)
 
 //This is the object that is a WIP
 let obj = {
@@ -12,8 +13,7 @@ let obj = {
     posx: 0,
     posy: 0,
     velocity: 10,
-    speed: 1,
-    sprite: "",
+    facing: 1,
     framerate: 30, //This is a delay between frames, Not FPS // Its important enough delay is given for the CPU to handle instructions
     direction: "",
     vecx: 0,
@@ -21,53 +21,53 @@ let obj = {
     stepCount: 0,
     stepLength: 0,
     up: async function(length) {
-      this.stepCount = Math.ceil(length / (this.velocity * this.speed))
+      this.stepCount = Math.ceil(length / this.velocity)
       this.stepLength = length / this.stepCount
       this.direction = "up"
       this.frame(this)
-      await sleep((this.framerate + 5) * this.stepCount)
+      await sleep((this.framerate + 2) * this.stepCount)
       
     },
     down: async function(length) {
-      this.stepCount = Math.ceil(length / (this.velocity * this.speed))
+      this.stepCount = Math.ceil(length / this.velocity)
       this.stepLength = length / this.stepCount
       this.direction = "down"
       this.frame(this)
-      await sleep((this.framerate + 5) * this.stepCount)
+      await sleep((this.framerate + 2) * this.stepCount)
       
     },
     left: async function(length) {
-      this.stepCount = Math.ceil(length / (this.velocity * this.speed))
+      this.stepCount = Math.ceil(length / this.velocity)
       this.stepLength = length / this.stepCount
       this.direction = "left"
       this.frame(this)//, stepCount, stepLength, direction)
-      await sleep((this.framerate + 5) * this.stepCount)
+      await sleep((this.framerate + 2) * this.stepCount)
       
     },
     right: async function(length) {
-      this.stepCount = Math.ceil(length / (this.velocity * this.speed))
+      this.stepCount = Math.ceil(length / this.velocity)
       this.stepLength = length / this.stepCount
       this.direction = "right"
       this.frame(this)
-      await sleep((this.framerate + 5) * this.stepCount)
+      await sleep((this.framerate + 2) * this.stepCount)
       
     },
     vector: async function(lenx, leny) {
       length = Math.sqrt((Math.abs(lenx) ** 2) + (Math.abs(leny) ** 2));  //wow higher math and basic trig did me wonders for once
-      this.stepCount = Math.ceil(length / (this.velocity * this.speed))
+      this.stepCount = Math.ceil(length / this.velocity)
       this.vecx = lenx / this.stepCount
       this.vecy = leny / this.stepCount
       //this.stepLength = length / this.stepCount
       this.direction = "vector"
       this.frame(this)
-      await sleep((this.framerate + 5) * this.stepCount)
+      await sleep((this.framerate + 2) * this.stepCount)
       
     },
     frame: async function() {
       while (true){
       if (this.stepCount > 0) {
         await sleep(this.framerate)
-        console.log(this.id, "moving", this.direction)
+        //console.log(this.id, "moving", this.direction)
 
         switch(this.direction) {
           case "up":
@@ -95,11 +95,19 @@ let obj = {
         this.target.style.left = this.posx + "px"
 
       } else{
-        console.log("Ended", this.direction )
+        //console.log("Ended", this.direction )
         return "done"
       }}
       
-  }
+    },
+    change: async function(source) {
+      // Select the image element using its ID
+      this.target.src = source
+    },
+    flip: async function() {
+      this.facing = this.facing * -1
+      this.target.style.transform = "scaleX(" + this.facing + ")"
+    }
 };
 
 //This section is used to initialise Any animated object and any specific propertiess
@@ -115,6 +123,8 @@ let obj2 = Object.create(obj);
 obj2.target = document.getElementById("animate2")
 obj2.id = "image";
 obj2.posx = -300
+
+
 
 //We're So back!
 //await is used to wait for a thing to finish
@@ -134,8 +144,15 @@ async function marquee() {
 async function run() {
   //these two will fire in parralel
   //dont move the same object twice at the same time, Will cause unexpected behaviour!
-  marquee()
-
+  //marquee()
+  obj1.right(350 + (window.innerWidth / 2))
+  await obj2.right(350 + (window.innerWidth / 2))
+  obj2.change("../media/favicon.ico")
+  obj1.right(window.innerWidth / 4)
+  await obj2.right(window.innerWidth / 4)
+  obj2.flip()
+  obj1.right(window.innerWidth / 4 + 100)
+  obj2.right(window.innerWidth / 4)
   
 }
 function sleep(ms) {
