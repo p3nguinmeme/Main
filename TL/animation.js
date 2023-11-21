@@ -14,8 +14,10 @@ let obj = {
     velocity: 10,
     speed: 1,
     sprite: "",
-    framerate: 60, //This is a delay between frames, Not FPS // Its important enough delay is given for the CPU to handle instructions
+    framerate: 30, //This is a delay between frames, Not FPS // Its important enough delay is given for the CPU to handle instructions
     direction: "",
+    vecx: 0,
+    vecy: 0,
     stepCount: 0,
     stepLength: 0,
     up: async function(length) {
@@ -50,6 +52,17 @@ let obj = {
       await sleep((this.framerate + 5) * this.stepCount)
       
     },
+    vector: async function(lenx, leny) {
+      length = Math.sqrt((Math.abs(lenx) ** 2) + (Math.abs(leny) ** 2));  //wow higher math and basic trig did me wonders for once
+      this.stepCount = Math.ceil(length / (this.velocity * this.speed))
+      this.vecx = lenx / this.stepCount
+      this.vecy = leny / this.stepCount
+      //this.stepLength = length / this.stepCount
+      this.direction = "vector"
+      this.frame(this)
+      await sleep((this.framerate + 5) * this.stepCount)
+      
+    },
     frame: async function() {
       while (true){
       if (this.stepCount > 0) {
@@ -69,12 +82,15 @@ let obj = {
           case "right":
             this.posx = this.posx + this.stepLength
             break;
+          case "vector":
+            this.posx = this.posx + this.vecx
+            this.posy = this.posy + this.vecy
+            break;
           default:
             console.log("This shouldnt fire");
         }
         this.stepCount = this.stepCount - 1
 
-        //These two lines suffer the issue that im struggling to fix
         this.target.style.top = this.posy + "px"
         this.target.style.left = this.posx + "px"
 
@@ -90,12 +106,14 @@ let obj = {
 
 //obj1  =Main character to be moved
 let obj1 = Object.create(obj);
-obj1.id = 1;
+obj1.id = "neco";
+obj1.posx = -300 - 100
+obj1.posy = 200
 
 //obj2 =links 
 let obj2 = Object.create(obj);
 obj2.target = document.getElementById("animate2")
-obj2.id = 2;
+obj2.id = "image";
 obj2.posx = -300
 
 //We're So back!
@@ -104,17 +122,20 @@ obj2.posx = -300
 //scrolling image = funny
 //consider updating what the width of the screen is to fix some bugs :thumbs-up:
 async function marquee() {
-  await obj2.right(300 + canvas.width)
+  obj1.right(350 + 100 + window.innerWidth)
+  await obj2.right(350 + window.innerWidth)
+  obj1.posx = -300 - 100
   obj2.posx = -300
+
+
   marquee()
 }
 
 async function run() {
   //these two will fire in parralel
+  //dont move the same object twice at the same time, Will cause unexpected behaviour!
   marquee()
-  await obj1.down(200)
-  await obj1.right(200)
-  await obj1.left(100)
+
   
 }
 function sleep(ms) {
