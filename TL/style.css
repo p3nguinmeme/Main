@@ -192,7 +192,7 @@ a{
 #animate3 {
     position: absolute;
     right: -100px;
-    z-index: 98;
+    z-index: 101;
     width: 100px;
     height: 100px;
 }

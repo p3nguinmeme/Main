@@ -16,6 +16,7 @@ let obj = {
     facing: 1,
     framerate: 30, //This is a delay between frames, Not FPS // Its important enough delay is given for the CPU to handle instructions
     direction: "",
+    //vecx and vecy are Steplength for a specific Axis,
     vecx: 0,
     vecy: 0,
     stepCount: 0,
@@ -40,7 +41,7 @@ let obj = {
       this.stepCount = Math.ceil(length / this.velocity)
       this.stepLength = length / this.stepCount
       this.direction = "left"
-      this.frame(this)//, stepCount, stepLength, direction)
+      this.frame(this)
       await sleep((this.framerate + 2) * this.stepCount)
       
     },
@@ -112,49 +113,47 @@ let obj = {
 
 //This section is used to initialise Any animated object and any specific propertiess
 
-//obj1  =Main character to be moved
+//obj1  = Main character to be moved
 let obj1 = Object.create(obj);
 obj1.id = "neco";
 obj1.posx = -300 - 100
-obj1.posy = 200
+obj1.posy = 200 
 
-//obj2 =links 
+//obj2 = Image being shoved onto frame 
 let obj2 = Object.create(obj);
 obj2.target = document.getElementById("animate2")
 obj2.id = "image";
 obj2.posx = -300
+obj2.posy = 50
 
+//obj3 = La Cretura
 let obj3 = Object.create(obj);
-obj2.target = document.getElementById("animate3")
+obj3.target = document.getElementById("animate3")
 obj3.id = "menace";
-obj3.posx = 900 - 100
-obj3.posy = 900 - 100
-
-
-//We're So back!
-//await is used to wait for a thing to finish
-
-//scrolling image = funny
-//consider updating what the width of the screen is to fix some bugs :thumbs-up:
-
+obj3.posx = window.innerWidth + 300
+obj3.posy = window.innerHeight - 100
+obj3.flip()
 
 async function run() {
+  obj1.velocity = 5
+  obj2.velocity = 5
+  obj3.velocity = 5
   //these two will fire in parralel
   //dont move the same object twice at the same time, Will cause unexpected behaviour!
   obj1.right(350 + (window.innerWidth / 2))
-  obj3.left(500)
+  obj3.left(500 + 100 + 300).then(function() {
+    //throw rock
+  })
   await obj2.right(350 + (window.innerWidth / 2))
 
 
   obj1.change("media/falling.gif")
+  obj1.velocity = 10
   obj1.vector(window.innerWidth / 2 + 100, window.innerHeight + 800)
 
-  obj2.velocity = 5
+  obj2.velocity = 2
   await obj2.right(window.innerWidth / 8)
 
-  
-
-  
 }
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
