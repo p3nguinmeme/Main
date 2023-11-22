@@ -5,6 +5,8 @@ canvas.height = window.innerHeight;
 //TODO
 //implement dynamic framerate assignment based on a dummy render
 //add ability for arcs to be done (low priority)
+//standardise style of page to allow for concrete animations
+//physics might be really funny
 
 //This is the object that is a WIP
 let obj = {
