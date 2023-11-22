@@ -1,5 +1,4 @@
 * {
-    background-image: url(media/spin.gif) !important;
     border: 0px;
     padding: 0px;
     margin: 0px;
@@ -28,56 +27,54 @@ body {
     width: 235px;
     height: 138px;
     margin: 4px;
-    border: 4px solid;
-    border-radius: 35px;
-    transition: border-color 0.15s ease-in-out;
-    border-color: #959595;
+    border: 4px solid #aaa;
+    border-radius: 35px ;
     background-size: contain;
+    transition: border-color 0.15s ease-in-out;
 }
 .channel:hover {
-    transition: border-color 0.15s ease-in-out;
     border-color: rgb(0, 183, 255);
 }
 
 /* Channels (font used is "Apple SD Gothic Neo Heavy") */
 
 #channel1 {
-    background-image: url(media/spin.gif);
+    background-image: url(media/ChannelThumbnails/Channel1.png); /* Disc Channel */
     margin-top: 50px;
 }
 #channel2 {
-    background-image: url(media/spin.gif);
+    background-image: url(media/ChannelThumbnails/Channel2.png); /* Music Channel */
     margin-top: 50px;
 }
 #channel3 {
-    background-image: url(media/spin.gif);
+    background-image: url(media/ChannelThumbnails/Channel3.png); /* Photos Channel */
     margin-top: 50px;
 }
 #channel4 {
-    background-image: url(media/spin.gif);
+    background-image: url(media/ChannelThumbnails/Channel4.png); /* Homebrew Channel */
     margin-top: 50px;
 }
 #channel5 {
-    background-image: url(media/spin.gif);
+    background-image: url(media/ChannelThumbnails/Channel5.png);
 }
 #channel6 {
-    background-image: url(media/spin.gif);
+    background-image: url(media/ChannelThumbnails/Channel6.png);
 }
 #channel7 {
-    background-image: url(media/spin.gif);
+    background-image: url(media/ChannelThumbnails/Channel7.png);
 }
 #channel8 {
-    background-image: url(media/spin.gif);
+    background-image: url(media/ChannelThumbnails/Channel8.png);
 }
 #channel9 {
-    background-image: url(media/spin.gif);
+    background-image: url(media/ChannelThumbnails/Channel9.png);
 }
 #channel10 {
-    background-image: url(media/spin.gif);
+    background-image: url(media/ChannelThumbnails/Channel10.png);
 }
 #channel11 {
-    background-image: url(media/spin.gif);
+    background-image: url(media/ChannelThumbnails/Channel11.png);
 }
 #channel12 {
-    background-image: url(media/spin.gif);
+    background-image: url(media/ChannelThumbnails/Channel12.png);
 }
