@@ -25,13 +25,9 @@ th, td {
 	margin: 0px;
 	padding: 0px;
 }
-#scrolltext {
-	padding-left: 20px;
-	padding-right: 20px;
-}
 img {
     z-index: 98;
-    width: 250px;
+    width: 30%;
 	border: #1F1;
 	border-style: double;
 	border-width: 5px;
@@ -39,10 +35,7 @@ img {
 .noborder{
 	border-style: none !important;
 }
-audio {
-	height: 30px;
-	width: 270px;
-}
+
 
 
 
@@ -92,14 +85,14 @@ audio {
     position: fixed !important;
     bottom: 0% !important;
     right: 0% !important;
-    width: 500px !important;
-    height: 200px !important;
+    width: 35% !important;
+    height: 30% !important;
     background: black;
     z-index: 2;
 }
 #visualiser-text{
 	position: fixed;
-	bottom: 210px;
+	bottom: 31%;
     right: 0px;
 }
 
@@ -142,12 +135,12 @@ a{
 }
 
 .link {
-    width: 150px !important;
-    height:40px !important;
+    width: 25%;
 }
 
 #links {
-    width: fit-content;
+    height: 6%;
+    width: 40%;
     border: #ffcc66;
     border-style: solid solid hidden hidden;
     border-width: 3px;
@@ -161,9 +154,8 @@ a{
     position: fixed;
     top: 0;
     left: 0;
-    padding: 10px;
-    width: 250px;
-    max-width: 100%;
+    padding: 0.5%;
+    width: 10%;
 }
 
 #animate-container {
@@ -176,32 +168,29 @@ a{
     
 }
 #animate1 {
-    width: 100px;
-    height: 100px;
+    width: 6%;
     position: absolute;
+    
     z-index: 3;
 }
 
 #animate2 {
     position: absolute;
-    left: -300px;
-    width: 250px;
-    height: 250px;
+    
+    width: 12%;
     z-index: 3;
 }
 
 #animate3 {
     position: absolute;
-    right: -100px;
+    
     z-index: 3;
-    width: 100px;
-    height: 100px;
+    width: 6%;
 }
 
 #animate4 {
     position: absolute;
-    right: -100px;
+    
     z-index: 4;
-    width: 50px;
-    height: 50px;
+    width: 3%;
 }
