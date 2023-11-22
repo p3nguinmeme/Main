@@ -134,6 +134,12 @@ obj3.posx = window.innerWidth + 300
 obj3.posy = window.innerHeight - 100
 obj3.flip()
 
+let obj4 = Object.create(obj);
+obj4.target = document.getElementById("animate4")
+obj4.id = "projectile"
+obj4.posx = window.innerWidth
+obj4.posy = window.innerHeight - 50
+obj4.up(1)
 async function run() {
   obj1.velocity = 5
   obj2.velocity = 5
@@ -142,17 +148,29 @@ async function run() {
   //dont move the same object twice at the same time, Will cause unexpected behaviour!
   obj1.right(350 + (window.innerWidth / 2))
   obj3.left(500 + 100 + 300).then(function() {
-    //throw rock
+    obj3.change("media/laughing.gif")//update when gif avalible, idle works aswell
+    obj4.posx = obj3.posx
+    obj4.posy = obj3.posy
+    obj4.vector(-350, -700)
+
+    
   })
   await obj2.right(350 + (window.innerWidth / 2))
+  obj2.velocity = 2
+  obj2.right(window.innerWidth / 8)
 
+  //obj3.change("media/laughing.gif")//add back once gif obtained
 
   obj1.change("media/falling.gif")
   obj1.velocity = 10
-  obj1.vector(window.innerWidth / 2 + 100, window.innerHeight + 800)
+  await obj1.vector(350, window.innerHeight -300)
+  obj1.down(200)
+  obj3.change("media/falling.gif")
+  obj3.down(200)
 
-  obj2.velocity = 2
-  await obj2.right(window.innerWidth / 8)
+  await sleep(3000)
+  obj4.up(50 + obj4.posy)
+  
 
 }
 function sleep(ms) {
