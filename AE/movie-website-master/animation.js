@@ -116,13 +116,16 @@ obj1.posy = 100
 
 //scrolling image = funny
 //consider updating what the width of the screen is to fix some bugs :thumbs-up:
-
+async function marquee(){
+  await obj1.right(window.innerWidth + 200)
+  obj1.posx = -700
+  marquee()
+}
 
 async function run() {
-  //these two will fire in parralel
-  //dont move the same object twice at the same time, Will cause unexpected behaviour!
   obj1.velocity = 5
-  obj1.right(1000)
+  obj1.posx = -200
+  marquee()
 
   
 }
