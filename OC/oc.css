@@ -12,20 +12,17 @@ body {
     background-image: linear-gradient(#222 1.2px, transparent 1.2px), linear-gradient(to right, #222 1.2px, #000 1.2px);
     background-size: 24px 24px;
 }
-#content {
+#background {
     width: 1200px;
     height: 675px;
     margin: auto;
     margin-top: 20px;
-    background-image: url(media/MenuStripes.png);
-}
-#gradient {
-    width: 1200px;
-    height: 675px;
-    position: absolute;
-    background-image: linear-gradient(to right, #fff0, #fff, #fff0);
+    background-image: linear-gradient(to right, #fff0, #fff, #fff0),url(media/MenuStripes.png);
     /* background-image: url(media/ScaleReference.jpeg); */
     /* background-size: contain; */
+}
+#content {
+    position: absolute;
 }
 
 /* Channels */
@@ -103,4 +100,14 @@ body {
     background-image: url(media/ChannelThumbnails/Channel12.png);
     top: 344px;
     left: 862px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(0, 183, 255);
+    font-family: monospace;
+    position: absolute;
+    top: 494px;
+    left: 539px;
+    font-size: 47px;
 }
