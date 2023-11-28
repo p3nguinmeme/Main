@@ -25,21 +25,21 @@ body {
     position: absolute;
 }
 
-/* Channels */
+/* Channels Overall */
 
 .channel {
     width: 250px;
     height: 132px;
     position: absolute;
     border: 4px solid #aaa;
-    border-radius: 22px ;
+    border-radius: 22px;
     transition: border-color 0.15s ease-in-out;
 }
 .channel:hover {
     border-color: rgb(0, 183, 255);
 }
 
-/* Individual Channels (font used is "Apple SD Gothic Neo Heavy") */
+/* Channels */
 
 #channel1 {
     background-image: url(media/ChannelThumbnails/Channel1.png); /* Disc Channel */
@@ -102,12 +102,33 @@ body {
     left: 862px;
 }
 
+/* Under the channels */
+
 h1 {
     text-align: center;
-    color: rgb(0, 183, 255);
-    font-family: monospace;
+    color: rgb(79 168 193);
+    font-family: 'Inter', sans-serif;
     position: absolute;
-    top: 494px;
+    top: 499px;
     left: 539px;
-    font-size: 47px;
+    font-size: 39px;
+}
+.button {
+    width: 112px;
+    height: 112px;
+    top: 516px;
+    position:absolute;
+    border: 4px solid rgb(0, 183, 255);
+    border-radius: 50%;
+    transition: border-color 0.15s ease-in-out;
+    background-color: #aaa;
+}
+.button:hover {
+    border-color: rgb(0, 183, 255);
+}
+#buttonLeft {
+    left: 31px;
+}
+#buttonRight {
+    left: 1046px;
 }
