@@ -17,9 +17,9 @@ body {
     height: 675px;
     margin: auto;
     margin-top: 20px;
-    background-image: linear-gradient(to right, #fff0, #fff, #fff0),url(media/MenuStripes.png);
+    background-size: contain;
+    background-image: linear-gradient(to right, #fff0 10%, #fffc, #fff0 90%),url(media/MenuStripes.png);
     /* background-image: url(media/ScaleReference.jpeg); */
-    /* background-size: contain; */
 }
 #content {
     position: absolute;
@@ -106,18 +106,19 @@ body {
 
 h1 {
     text-align: center;
-    color: rgb(79 168 193);
+    color: rgb(0, 183, 255);
     font-family: 'Inter', sans-serif;
     position: absolute;
     top: 499px;
-    left: 539px;
+    left: 538px;
     font-size: 39px;
+    letter-spacing: 2px;
 }
 .button {
-    width: 112px;
-    height: 112px;
-    top: 516px;
-    position:absolute;
+    width: 115px;
+    height: 115px;
+    top: 509px;
+    position: absolute;
     border: 4px solid rgb(0, 183, 255);
     border-radius: 50%;
     transition: border-color 0.15s ease-in-out;
@@ -127,8 +128,18 @@ h1 {
     border-color: rgb(0, 183, 255);
 }
 #buttonLeft {
-    left: 31px;
+    left: 49px;
 }
 #buttonRight {
-    left: 1046px;
+    left: 1034px;
+}
+#buttonLeftBackground {
+    width: 176px;
+    height: 137px;
+    top: 502px;
+    position: absolute;
+    border: 4px solid #888; /* fix colours and border width !!!!! */
+    border-left: 0px;
+    border-radius: 0% 50% 50% 0%;
+    background-color: #aaa; /* fix colours !!!!! */
 }
